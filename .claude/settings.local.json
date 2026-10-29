@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(node --version 2>/dev/null; npm --version 2>/dev/null)",
-      "Bash(cd D:/creative_touch/apexdental && npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)"
-    ]
-  }
-}

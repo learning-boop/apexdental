@@ -36,6 +36,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+# source image folders
+/apex-dental-images
+/dental-project-images
+
+# claude
+.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
