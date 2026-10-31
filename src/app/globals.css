@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Short screens (e.g. 1366x768 laptops) get a tighter hero. */
+@custom-variant short (@media (max-height: 820px));
+@custom-variant short-phone (@media (max-width: 1023.98px) and (max-height: 760px));
+
 @theme inline {
   --color-sand: #F6EFE6;
   --color-sand-dark: #e8e0d0;
@@ -35,4 +39,71 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Header heights, so the home hero can fill exactly one screen. */
+:root {
+  --header-h: 65px;
+  --bottom-bar-h: 57px;
+}
+@media (min-width: 1024px) {
+  :root {
+    --header-h: 105px;
+    --bottom-bar-h: 0px;
+  }
+}
+
+.hero-screen {
+  height: calc(100vh - var(--header-h) - var(--bottom-bar-h));
+  height: calc(100svh - var(--header-h) - var(--bottom-bar-h));
+  min-height: 520px;
+}
+@media (min-width: 1024px) {
+  .hero-screen {
+    min-height: 600px;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-rise {
+  animation: hero-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise {
+    animation: none;
+  }
+}
+
+/* Long-form text on policy pages */
+.legal-prose h2 {
+  font-family: var(--font-heading), Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  color: #1e1e1e;
+  margin-top: 2.25rem;
+}
+.legal-prose ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.legal-prose li + li {
+  margin-top: 0.4rem;
+}
+.legal-prose a {
+  color: #0f4c5c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-prose strong {
+  color: #1e1e1e;
+  font-weight: 600;
 }

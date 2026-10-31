@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { site } from "@/content/site";
 
 const problems = [
   "Toothache",
@@ -14,7 +15,7 @@ const problems = [
 
 const days = ["No preference", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-export default function BookSection() {
+export default function BookSection({ showHeading = true }: { showHeading?: boolean }) {
   const [formData, setFormData] = useState({
     name: "", phone: "", email: "", problem: "", day: "",
   });
@@ -30,14 +31,16 @@ export default function BookSection() {
   return (
     <section id="book" className="py-14 lg:py-28 pb-24 lg:pb-28">
       <div className="max-w-7xl mx-auto px-5 lg:px-6">
-        <div className="text-center mb-12">
-          <h2 className="font-heading text-3xl lg:text-[2.5rem] text-charcoal mb-3">
-            Book your visit.
-          </h2>
-          <p className="text-charcoal-light text-lg">
-            Tell us what&apos;s going on and our team will call you to find a time.
-          </p>
-        </div>
+        {showHeading && (
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl lg:text-[2.5rem] text-charcoal mb-3">
+              Book your visit.
+            </h2>
+            <p className="text-charcoal-light text-lg">
+              Tell us what&apos;s going on and our team will call you to find a time.
+            </p>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form */}
@@ -77,7 +80,7 @@ export default function BookSection() {
           <div className="space-y-6">
             <div className="rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.5!2d-106.7284!3d35.1861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220e8db43b9c2d%3A0x8c3b3b3b3b3b3b3b!2s6330%20Riverside%20Plaza%20Ln%20NW%20Suite%20165%2C%20Albuquerque%2C%20NM%2087120!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src={site.mapsEmbed}
                 width="100%"
                 height="300"
                 style={{ border: 0 }}

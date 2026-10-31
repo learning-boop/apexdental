@@ -18,9 +18,19 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Apex Dental NM | Family & Emergency Dentist | West Albuquerque",
+  metadataBase: new URL("https://www.apexdentalnm.com"),
+  title: {
+    default: "Apex Dental NM | Family & Emergency Dentist | West Albuquerque",
+    template: "%s | Apex Dental NM",
+  },
   description:
     "Family, children's and emergency dentistry on Albuquerque's west side. Same-day emergency appointments. Open Tue-Sat 9am-7pm. Call 505-585-5157.",
+  openGraph: {
+    type: "website",
+    siteName: "Apex Dental NM",
+    locale: "en_US",
+    images: [{ url: "/images/sections/hero-poster-desktop.jpg", width: 1920, height: 1080 }],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

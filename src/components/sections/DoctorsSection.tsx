@@ -12,7 +12,7 @@ const doctors = [
     name: "Dr. Suneel Namburi",
     credentials: "DMD, MDS, MFDS",
     bio: "Specialist training in prosthodontics, DMD from Boston University, 10+ years in general, cosmetic and restorative dentistry.",
-    image: "/images/team/dr-suneel-namburi.jpg",
+    image: "/images/team/dr-suneel-namburi-portrait.jpg",
     placeholder: null,
   },
 ];

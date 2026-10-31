@@ -11,10 +11,12 @@ import DoctorsSection from "@/components/sections/DoctorsSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import EmergencyBand from "@/components/sections/EmergencyBand";
 import BookSection from "@/components/sections/BookSection";
+import DentistSchema from "@/components/page/DentistSchema";
 
 export default function Home() {
   return (
     <>
+      <DentistSchema />
       {/* 1. Hero */}
       <Hero />
       {/* 2. The Pain */}

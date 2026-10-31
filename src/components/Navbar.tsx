@@ -96,7 +96,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50">
       {/* Top info bar */}
       <div className="hidden lg:block bg-deep-teal text-[13px] tracking-wide">
-        <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-center gap-2 text-white/70">
+        <div className="max-w-7xl mx-auto px-6 h-9 flex items-center justify-center gap-2 text-white/70">
           <span>6330 Riverside Plaza Ln NW, Suite 165</span>
           <span aria-hidden>&middot;</span>
           <span>Open Tue&ndash;Sat 9 am&ndash;7 pm</span>
@@ -112,13 +112,13 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5">
               <Image src="/images/logo.svg" alt="" width={28} height={38} className="h-9 w-auto" />
-              <span className="font-heading text-xl tracking-tight text-charcoal">
+              <span className="font-heading text-xl tracking-tight text-charcoal whitespace-nowrap">
                 Apex Dental
               </span>
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden lg:flex items-center gap-0.5">
+            <div className="hidden lg:flex items-center gap-0.5 whitespace-nowrap">
               <DropdownTrigger
                 label="Services"
                 active={activeDropdown === "services"}
@@ -179,8 +179,8 @@ export default function Navbar() {
             </div>
 
             {/* Desktop right */}
-            <div className="hidden lg:flex items-center gap-3">
-              <a href="tel:5055855157" className="text-sm text-charcoal-light hover:text-charcoal transition-colors">505-585-5157</a>
+            <div className="hidden lg:flex items-center gap-3 whitespace-nowrap">
+              <a href="tel:5055855157" className="hidden xl:inline text-sm text-charcoal-light hover:text-charcoal transition-colors">505-585-5157</a>
               <Link href="/services/emergency-dental-care" className="px-4 py-2 bg-terracotta text-white text-sm font-medium rounded-md hover:bg-terracotta-dark transition-colors">Emergency</Link>
               <Link href="/book" className="px-5 py-2 bg-teal text-white text-sm font-medium rounded-md hover:bg-teal-dark transition-colors">Book a Visit</Link>
             </div>
