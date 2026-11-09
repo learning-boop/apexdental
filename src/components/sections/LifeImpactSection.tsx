@@ -4,17 +4,17 @@ const cards = [
   {
     title: "At work",
     description: "Hard to focus when your tooth won\u2019t stop aching.",
-    image: "/images/sections/06-work-discomfort-laptop.jpg",
+    image: "/images/lifestyle/work-dental-discomfort.jpg",
   },
   {
     title: "At home",
     description: "Skipping family meals you used to enjoy.",
-    image: "/images/sections/07-dinner-discomfort-laptop.jpg",
+    image: "/images/lifestyle/dinner-dental-discomfort.jpg",
   },
   {
     title: "With people",
     description: "Holding back a laugh, hiding your smile.",
-    image: "/images/sections/08-smile-confidence-laptop.jpg",
+    image: "/images/lifestyle/smile-confidence.jpg",
   },
 ];
 
@@ -29,7 +29,7 @@ export default function LifeImpactSection() {
         {/* Desktop: wide banner with overlay cards */}
         <div className="hidden lg:block relative rounded-lg overflow-hidden">
           <Image
-            src="/images/sections/05-family-dinner-banner-laptop.jpg"
+            src="/images/lifestyle/family-dinner-banner.jpg"
             alt="Family gathering where one person is experiencing tooth discomfort"
             width={1916}
             height={821}

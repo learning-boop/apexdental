@@ -83,6 +83,150 @@ body {
   }
 }
 
+/* ---------- First-visit loading animation (src/components/IntroSplash.tsx) ----------
+   Hidden unless the inline script in <head> sets html[data-intro] to "play".
+   Timeline: logo 0-1s, name 0.6-1.4s, hold 1.4-2s, content out 2s, overlay lifts 2.2-2.9s.
+   Keep in step with REVEAL_MS / DONE_MS in IntroSplash. */
+.intro {
+  display: none;
+}
+html[data-intro="play"] .intro,
+html[data-intro="reveal"] .intro {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(60% 50% at 50% 46%, rgb(32 239 218 / 0.08), transparent 70%),
+    var(--color-teal-dark);
+  animation: intro-lift 0.75s cubic-bezier(0.76, 0, 0.24, 1) 2.2s both;
+}
+html[data-intro="reveal"] .intro {
+  pointer-events: none;
+}
+html[data-intro="play"] {
+  overflow: hidden;
+}
+html[data-intro="play"] .hero-rise {
+  animation-play-state: paused;
+}
+
+.intro-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  animation: intro-content-out 0.4s cubic-bezier(0.4, 0, 0.2, 1) 2s both;
+}
+
+/* Logo mark */
+.intro-mark {
+  width: 56px;
+  height: auto;
+  overflow: visible;
+  animation: intro-mark-in 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s both;
+}
+.intro-lobe-a,
+.intro-lobe-b {
+  transform-box: fill-box;
+  transform-origin: 50% 20%;
+}
+.intro-lobe-a {
+  animation: intro-lobe-a 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s both;
+}
+.intro-lobe-b {
+  animation: intro-lobe-b 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s both;
+}
+.intro-inner {
+  animation: intro-fade 0.5s ease 0.7s both;
+}
+
+/* Company name */
+.intro-name {
+  display: block;
+  font-family: var(--font-heading), Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 7vw, 2.75rem);
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  animation: intro-name-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.6s both;
+}
+
+@keyframes intro-mark-in {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+@keyframes intro-lobe-a {
+  from { transform: translate(18%, -10%) rotate(12deg); }
+  to   { transform: none; }
+}
+@keyframes intro-lobe-b {
+  from { transform: translate(-18%, -10%) rotate(-12deg); }
+  to   { transform: none; }
+}
+@keyframes intro-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes intro-name-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    letter-spacing: 0.4em;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    letter-spacing: 0.18em;
+  }
+}
+@keyframes intro-content-out {
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+    filter: blur(4px);
+  }
+}
+@keyframes intro-lift {
+  from { clip-path: inset(0 0 0 0); }
+  to   { clip-path: inset(0 0 100% 0); visibility: hidden; }
+}
+@keyframes intro-fade-out {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* Reduced motion: show logo + name statically, then fade out */
+@media (prefers-reduced-motion: reduce) {
+  html[data-intro="play"] .intro,
+  html[data-intro="reveal"] .intro {
+    animation: intro-fade-out 0.4s ease 1s both;
+  }
+  .intro-stack,
+  .intro-mark,
+  .intro-lobe-a,
+  .intro-lobe-b,
+  .intro-inner,
+  .intro-name {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* Long-form text on policy pages */
 .legal-prose h2 {
   font-family: var(--font-heading), Georgia, "Times New Roman", serif;

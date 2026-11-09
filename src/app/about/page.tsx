@@ -72,7 +72,7 @@ export default function AboutPage() {
         title="Team-based care for every age,"
         titleAccent="right here on the west side."
         intro="We care for children and adults of all ages—including patients who feel anxious or have a developmental or medical condition that makes dental care more complex."
-        image="/images/sections/13-accessible-clinic-all-devices.jpg"
+        image="/images/lifestyle/accessible-dental-clinic.jpg"
         imageAlt="Smiling young man in a wheelchair arriving at a bright, accessible dental clinic with his mother"
         imagePosition="50% 40%"
         badge="14 years of experience"

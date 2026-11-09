@@ -65,7 +65,7 @@ export default function FirstVisitPage() {
         title="Your first visit,"
         titleAccent="made easy."
         intro="No rush and no surprises. Here’s what to bring and what to expect, so you can walk in feeling ready."
-        image="/images/sections/20-relaxed-waiting-card-all-devices.jpg"
+        image="/images/services/relaxed-dental-visit.jpg"
         imageAlt="Woman relaxing with a cup of tea in a calm dental waiting area"
         badge="New patients welcome"
         crumbs={[{ label: "New patients", href: "/new-patients/your-first-visit" }, { label: "Your first visit" }]}

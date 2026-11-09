@@ -13,7 +13,7 @@ export default function DentistSchema() {
         url: site.url,
         telephone: site.phone,
         email: site.email,
-        image: `${site.url}/images/sections/hero-poster-desktop.jpg`,
+        image: `${site.url}/images/hero/dental-office-still-desktop.jpg`,
         address: {
           "@type": "PostalAddress",
           streetAddress: site.address.street,

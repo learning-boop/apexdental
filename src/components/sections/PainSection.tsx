@@ -13,7 +13,7 @@ const cards = [
   {
     icon: HeartPulse,
     title: "Throbbing toothache",
-    image: "/images/sections/21-pain-throbbing-toothache.jpg",
+    image: "/images/emergency/throbbing-toothache.jpg",
     alt: "Woman holding her cheek at night with a throbbing toothache",
     description: "Often a deep cavity or an infected nerve.",
     href: "/services/root-canal-treatment",
@@ -22,7 +22,7 @@ const cards = [
   {
     icon: Hammer,
     title: "Pain when you bite",
-    image: "/images/sections/22-pain-bite.jpg",
+    image: "/images/emergency/painful-bite.jpg",
     alt: "Man wincing after biting into an apple",
     description: "Can mean a cracked tooth or a lost filling.",
     href: "/services/emergency-dental-care",
@@ -31,7 +31,7 @@ const cards = [
   {
     icon: CircleAlert,
     title: "Swollen gum or face",
-    image: "/images/sections/23-pain-swollen-face.jpg",
+    image: "/images/emergency/swollen-face-infection.jpg",
     alt: "Woman checking a swollen cheek in the mirror",
     description: "A sign of infection that needs quick care.",
     href: "/services/emergency-dental-care",
@@ -40,7 +40,7 @@ const cards = [
   {
     icon: Droplets,
     title: "Bleeding gums",
-    image: "/images/sections/24-pain-bleeding-gums.jpg",
+    image: "/images/emergency/bleeding-gums.jpg",
     alt: "Man pausing while flossing because his gums feel tender",
     description: "An early warning of gum disease.",
     href: "/services/gum-disease-treatment",
@@ -49,7 +49,7 @@ const cards = [
   {
     icon: CircleDot,
     title: "Loose or missing tooth",
-    image: "/images/sections/25-pain-loose-tooth.jpg",
+    image: "/images/emergency/loose-tooth.jpg",
     alt: "Man checking a loose tooth with a hand mirror",
     description: "Gaps let other teeth drift and bone shrink.",
     href: "/services/dental-implants",
@@ -58,7 +58,7 @@ const cards = [
   {
     icon: Thermometer,
     title: "Hot and cold sensitivity",
-    image: "/images/sections/26-pain-sensitivity.jpg",
+    image: "/images/emergency/tooth-sensitivity.jpg",
     alt: "Woman wincing after a sip of iced coffee",
     description: "Worn enamel or a cavity reaching the inner tooth.",
     href: "/services/general-dentistry",

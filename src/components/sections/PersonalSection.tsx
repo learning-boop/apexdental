@@ -14,7 +14,7 @@ const tabs = [
       "Sealants that protect growing teeth",
     ],
     link: { href: "/services/childrens-dentistry", text: "Learn more about children\u2019s dentistry" },
-    image: "/images/sections/09-child-dental-care-all-devices.jpg",
+    image: "/images/lifestyle/child-dental-care.jpg",
     alt: "Happy child in a dental chair holding her mother\u2019s hand",
   },
   {
@@ -26,7 +26,7 @@ const tabs = [
       "Flexible scheduling including Saturdays",
     ],
     link: { href: "/services/general-dentistry", text: "Learn more about general dentistry" },
-    image: "/images/sections/10-family-check-in-all-devices.jpg",
+    image: "/images/lifestyle/family-dental-check-in.jpg",
     alt: "Father and son checking in at the dental clinic reception",
   },
   {
@@ -38,7 +38,7 @@ const tabs = [
       "We work with caregivers and family members",
     ],
     link: { href: "/services/dentures-and-partials", text: "Learn more about dentures & implants" },
-    image: "/images/sections/11-senior-smile-all-devices.jpg",
+    image: "/images/lifestyle/senior-dental-smile.jpg",
     alt: "Senior woman smiling at her reflection after dental work",
   },
   {
@@ -50,7 +50,7 @@ const tabs = [
       "A calm, judgement-free environment",
     ],
     link: { href: "/services/sedation-dentistry", text: "Learn more about sedation dentistry" },
-    image: "/images/sections/12-calm-dental-visit-all-devices.jpg",
+    image: "/images/lifestyle/calm-dental-visit.jpg",
     alt: "Patient reclining calmly with headphones during a dental visit",
   },
   {
@@ -62,7 +62,7 @@ const tabs = [
       "Referral to specialists when that\u2019s safer",
     ],
     link: { href: "/about", text: "Learn more about our approach" },
-    image: "/images/sections/13-accessible-clinic-all-devices.jpg",
+    image: "/images/lifestyle/accessible-dental-clinic.jpg",
     alt: "Patient in a wheelchair being welcomed at an accessible clinic entrance",
   },
 ];

@@ -52,7 +52,7 @@ export const services: Service[] = [
   {
     slug: "emergency-dental-care",
     name: "Emergency Dental Care",
-    image: "/images/sections/14-toothache-card-all-devices.jpg",
+    image: "/images/services/emergency-toothache-care.jpg",
     imageAlt: "Woman at home holding her cheek with a toothache",
     title: "In pain right now?",
     titleAccent: "We can often see you today.",
@@ -148,7 +148,7 @@ export const services: Service[] = [
   {
     slug: "root-canal-treatment",
     name: "Root Canal Treatment",
-    image: "/images/sections/21-pain-throbbing-toothache.jpg",
+    image: "/images/emergency/throbbing-toothache.jpg",
     imageAlt: "Woman sitting on her bed at night with a throbbing toothache",
     title: "Toothache that won’t go away?",
     titleAccent: "A root canal can save the tooth.",
@@ -229,7 +229,7 @@ export const services: Service[] = [
   {
     slug: "tooth-extractions",
     name: "Tooth Extractions & Wisdom Teeth",
-    image: "/images/sections/23-pain-swollen-face.jpg",
+    image: "/images/emergency/swollen-face-infection.jpg",
     imageAlt: "Woman checking a swollen jaw in the bathroom mirror",
     imagePosition: "35% 40%",
     title: "When a tooth can’t be saved,",
@@ -326,7 +326,7 @@ export const services: Service[] = [
   {
     slug: "dental-implants",
     name: "Dental Implants",
-    image: "/images/sections/15-restored-smile-card-all-devices.jpg",
+    image: "/images/services/smile-restoration.jpg",
     imageAlt: "Man in his sixties laughing with a full, natural smile",
     title: "Missing a tooth?",
     titleAccent: "Implants look, feel and work like your own.",
@@ -436,7 +436,7 @@ export const services: Service[] = [
   {
     slug: "crowns-and-bridges",
     name: "Crowns & Bridges",
-    image: "/images/sections/22-pain-bite.jpg",
+    image: "/images/emergency/painful-bite.jpg",
     imageAlt: "Man wincing as he bites into an apple",
     title: "Cracked, worn or missing teeth?",
     titleAccent: "Crowns and bridges restore them.",
@@ -540,7 +540,7 @@ export const services: Service[] = [
   {
     slug: "dentures-and-partials",
     name: "Dentures & Partials",
-    image: "/images/sections/11-senior-smile-all-devices.jpg",
+    image: "/images/lifestyle/senior-dental-smile.jpg",
     imageAlt: "Smiling senior woman admiring her new smile in a hand mirror",
     imagePosition: "50% 30%",
     title: "Missing several teeth?",
@@ -637,7 +637,7 @@ export const services: Service[] = [
   {
     slug: "gum-disease-treatment",
     name: "Gum Disease Treatment",
-    image: "/images/sections/16-gum-care-card-all-devices.jpg",
+    image: "/images/services/gum-disease-care.jpg",
     imageAlt: "Woman looking at her toothbrush with concern",
     title: "Bleeding gums?",
     titleAccent: "It’s an early warning worth listening to.",
@@ -719,7 +719,7 @@ export const services: Service[] = [
   {
     slug: "teeth-whitening",
     name: "Teeth Whitening",
-    image: "/images/sections/17-bright-smile-card-all-devices.jpg",
+    image: "/images/services/teeth-whitening.jpg",
     imageAlt: "Young woman laughing with a bright, white smile",
     title: "Smile lost its sparkle?",
     titleAccent: "Professional whitening brings it back.",
@@ -802,7 +802,7 @@ export const services: Service[] = [
   {
     slug: "cosmetic-dentistry",
     name: "Cosmetic Dentistry",
-    image: "/images/sections/08-smile-confidence-laptop.jpg",
+    image: "/images/lifestyle/smile-confidence.jpg",
     imageAlt: "Friends laughing together outdoors at golden hour",
     title: "Want a smile you love?",
     titleAccent: "Let’s design it together.",
@@ -888,7 +888,7 @@ export const services: Service[] = [
   {
     slug: "clear-aligners",
     name: "Clear Aligners",
-    image: "/images/sections/27-clear-aligners.jpg",
+    image: "/images/services/clear-aligners-orthodontics.jpg",
     imageAlt: "Smiling woman holding a clear aligner tray at home",
     title: "Crooked or crowded teeth?",
     titleAccent: "Straighten them almost invisibly.",
@@ -956,7 +956,7 @@ export const services: Service[] = [
   {
     slug: "general-dentistry",
     name: "General Dentistry",
-    image: "/images/sections/18-dental-checkup-card-all-devices.jpg",
+    image: "/images/services/dental-checkup-exam.jpg",
     imageAlt: "Relaxed patient looking at his dental x-ray with a hygienist",
     title: "Haven’t been in a while?",
     titleAccent: "Let’s start with a gentle check-up.",
@@ -1058,7 +1058,7 @@ export const services: Service[] = [
   {
     slug: "childrens-dentistry",
     name: "Children’s Dentistry",
-    image: "/images/sections/19-child-smile-card-all-devices.jpg",
+    image: "/images/services/pediatric-child-smile.jpg",
     imageAlt: "Young boy giving a thumbs-up in the dental chair",
     title: "Healthy smiles start early.",
     titleAccent: "Gentle dental care for kids.",
@@ -1145,7 +1145,7 @@ export const services: Service[] = [
   {
     slug: "sedation-dentistry",
     name: "Sedation Dentistry",
-    image: "/images/sections/12-calm-dental-visit-all-devices.jpg",
+    image: "/images/lifestyle/calm-dental-visit.jpg",
     imageAlt: "Woman relaxing calmly in a dental chair with headphones on",
     imagePosition: "50% 35%",
     title: "Nervous about the dentist?",
@@ -1255,49 +1255,49 @@ export const serviceGroups = [
   {
     id: "pain",
     label: "I’m in pain or it’s urgent",
-    image: "/images/sections/14-toothache-card-all-devices.jpg",
+    image: "/images/services/emergency-toothache-care.jpg",
     alt: "Woman holding her cheek with tooth pain",
     slugs: ["emergency-dental-care", "root-canal-treatment", "tooth-extractions"],
   },
   {
     id: "missing",
     label: "I’m missing teeth",
-    image: "/images/sections/15-restored-smile-card-all-devices.jpg",
+    image: "/images/services/smile-restoration.jpg",
     alt: "Man smiling with a confident restored smile",
     slugs: ["dental-implants", "crowns-and-bridges", "dentures-and-partials"],
   },
   {
     id: "gums",
     label: "My gums bleed",
-    image: "/images/sections/16-gum-care-card-all-devices.jpg",
+    image: "/images/services/gum-disease-care.jpg",
     alt: "Woman looking at her toothbrush with concern",
     slugs: ["gum-disease-treatment"],
   },
   {
     id: "smile",
     label: "I want a better smile",
-    image: "/images/sections/17-bright-smile-card-all-devices.jpg",
+    image: "/images/services/teeth-whitening.jpg",
     alt: "Young woman laughing with a bright smile",
     slugs: ["teeth-whitening", "cosmetic-dentistry", "clear-aligners"],
   },
   {
     id: "checkup",
     label: "I need a check-up",
-    image: "/images/sections/18-dental-checkup-card-all-devices.jpg",
+    image: "/images/services/dental-checkup-exam.jpg",
     alt: "Patient viewing his dental x-ray with a hygienist",
     slugs: ["general-dentistry"],
   },
   {
     id: "child",
     label: "It’s for my child",
-    image: "/images/sections/19-child-smile-card-all-devices.jpg",
+    image: "/images/services/pediatric-child-smile.jpg",
     alt: "Young boy giving a thumbs-up in the dental chair",
     slugs: ["childrens-dentistry"],
   },
   {
     id: "nervous",
     label: "I’m nervous",
-    image: "/images/sections/20-relaxed-waiting-card-all-devices.jpg",
+    image: "/images/services/relaxed-dental-visit.jpg",
     alt: "Woman relaxing with a cup of tea in a calm waiting area",
     slugs: ["sedation-dentistry"],
   },

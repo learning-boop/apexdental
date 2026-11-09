@@ -25,7 +25,7 @@ export default function ServicesPage() {
         title="Start with what’s bothering you."
         titleAccent="We’ll take it from there."
         intro="From a sudden toothache to a brand-new smile, our team treats children and adults of every age under one roof. Pick your problem below to see how we can help."
-        image="/images/sections/10-family-check-in-all-devices.jpg"
+        image="/images/lifestyle/family-dental-check-in.jpg"
         imageAlt="Father and teenage son checking in at a bright dental reception"
         imagePosition="50% 35%"
         badge="13 treatments under one roof"

@@ -9,7 +9,7 @@ const treatments = [
       { label: "Root Canals", href: "/services/root-canal-treatment" },
       { label: "Extractions", href: "/services/tooth-extractions" },
     ],
-    image: "/images/sections/14-toothache-card-all-devices.jpg",
+    image: "/images/services/emergency-toothache-care.jpg",
     alt: "Woman holding her cheek with tooth pain",
   },
   {
@@ -19,7 +19,7 @@ const treatments = [
       { label: "Crowns & Bridges", href: "/services/crowns-and-bridges" },
       { label: "Dentures", href: "/services/dentures-and-partials" },
     ],
-    image: "/images/sections/15-restored-smile-card-all-devices.jpg",
+    image: "/images/services/smile-restoration.jpg",
     alt: "Man smiling with a confident restored smile",
   },
   {
@@ -27,7 +27,7 @@ const treatments = [
     services: [
       { label: "Gum Disease Treatment", href: "/services/gum-disease-treatment" },
     ],
-    image: "/images/sections/16-gum-care-card-all-devices.jpg",
+    image: "/images/services/gum-disease-care.jpg",
     alt: "Woman looking at her toothbrush with concern",
   },
   {
@@ -37,7 +37,7 @@ const treatments = [
       { label: "Cosmetic", href: "/services/cosmetic-dentistry" },
       { label: "Clear Aligners", href: "/services/clear-aligners" },
     ],
-    image: "/images/sections/17-bright-smile-card-all-devices.jpg",
+    image: "/images/services/teeth-whitening.jpg",
     alt: "Young woman laughing with a bright smile",
   },
   {
@@ -45,7 +45,7 @@ const treatments = [
     services: [
       { label: "Exams, Cleanings, Fillings & Sealants", href: "/services/general-dentistry" },
     ],
-    image: "/images/sections/18-dental-checkup-card-all-devices.jpg",
+    image: "/images/services/dental-checkup-exam.jpg",
     alt: "Patient viewing dental x-ray with hygienist",
   },
   {
@@ -53,7 +53,7 @@ const treatments = [
     services: [
       { label: "Children\u2019s Dentistry", href: "/services/childrens-dentistry" },
     ],
-    image: "/images/sections/19-child-smile-card-all-devices.jpg",
+    image: "/images/services/pediatric-child-smile.jpg",
     alt: "Young boy giving a thumbs-up in the dental chair",
   },
   {
@@ -61,7 +61,7 @@ const treatments = [
     services: [
       { label: "Sedation Dentistry", href: "/services/sedation-dentistry" },
     ],
-    image: "/images/sections/20-relaxed-waiting-card-all-devices.jpg",
+    image: "/images/services/relaxed-dental-visit.jpg",
     alt: "Woman relaxing with tea in a calm waiting area",
   },
 ];

@@ -22,19 +22,24 @@ const stats = [
   { value: "Same day", label: "Emergency appointments" },
 ];
 
-// Background media. Each video switches on automatically once its file is in /public;
-// until then (and for visitors who prefer reduced motion) the poster photo shows.
-// Desktop is a full-width 16:9 loop, mobile a tall 9:16 loop.
+// Background media. Each clip is a short story (a nervous patient is reassured and
+// relaxes), so it plays once and rests on her smile instead of looping.
+// `poster` is the clip's first frame, shown while it loads so the swap is seamless.
+// `still` is its last frame, shown on its own whenever the video can't or shouldn't
+// play: reduced motion, no video file, or autoplay blocked.
+// Desktop is a 16:9 clip, mobile a tall 9:16 clip.
 const MEDIA = {
   desktop: {
     video: "/videos/hero-desktop.mp4",
-    poster: "/images/sections/hero-poster-desktop.jpg",
-    width: 1920,
-    height: 1080,
+    poster: "/images/hero/dental-office-poster-desktop.jpg",
+    still: "/images/hero/dental-office-still-desktop.jpg",
+    width: 1280,
+    height: 720,
   },
   mobile: {
     video: "/videos/hero-mobile.mp4",
-    poster: "/images/sections/hero-poster-mobile.jpg",
+    poster: "/images/hero/dental-office-poster-mobile.jpg",
+    still: "/images/hero/dental-office-still-mobile.jpg",
     width: 720,
     height: 1280,
   },
@@ -42,6 +47,7 @@ const MEDIA = {
 
 const DESKTOP_QUERY = "(min-width: 1024px)";
 const MOBILE_QUERY = "(max-width: 1023.98px)";
+const REDUCED_MOTION = "(prefers-reduced-motion: reduce)";
 
 function publicFileExists(publicPath: string) {
   return existsSync(path.join(process.cwd(), "public", publicPath));
@@ -51,24 +57,26 @@ export default function Hero() {
   const hasDesktopVideo = publicFileExists(MEDIA.desktop.video);
   const hasMobileVideo = publicFileExists(MEDIA.mobile.video);
 
-  // Art direction: one <picture>, so each device downloads only its own poster.
+  // Art direction: one <picture>, so each device downloads only its own image.
+  // With motion it shows the clip's first frame (the video then plays on top of it);
+  // with reduced motion, or no video file, it shows the smiling last frame instead.
   const common = {
     alt: "Smiling patient relaxing in a dental chair at Apex Dental",
     sizes: "100vw",
   };
-  const {
-    props: { srcSet: desktopSrcSet },
-  } = getImageProps({
-    ...common,
-    src: MEDIA.desktop.poster,
-    width: MEDIA.desktop.width,
-    height: MEDIA.desktop.height,
-  });
+  const srcSetFor = (src: string, size: { width: number; height: number }) =>
+    getImageProps({ ...common, src, width: size.width, height: size.height }).props.srcSet;
+
+  const desktopStillSrcSet = srcSetFor(MEDIA.desktop.still, MEDIA.desktop);
+  const desktopSrcSet = hasDesktopVideo
+    ? srcSetFor(MEDIA.desktop.poster, MEDIA.desktop)
+    : desktopStillSrcSet;
+  const mobileStillSrcSet = srcSetFor(MEDIA.mobile.still, MEDIA.mobile);
   const {
     props: { srcSet: mobileSrcSet, ...imgProps },
   } = getImageProps({
     ...common,
-    src: MEDIA.mobile.poster,
+    src: hasMobileVideo ? MEDIA.mobile.poster : MEDIA.mobile.still,
     width: MEDIA.mobile.width,
     height: MEDIA.mobile.height,
     loading: "eager",
@@ -78,43 +86,52 @@ export default function Hero() {
   return (
     <>
       <section className="hero-screen relative isolate overflow-hidden bg-teal-dark text-white">
-        {/* Background: poster photo, looping video on top, then colour overlays */}
+        {/* Background: photo, video on top (plays once), then colour overlays */}
         <div className="absolute inset-0 -z-10" aria-hidden="true">
+          {/* Framing: on desktop the media sits 6% right so her face stays clear of the
+              headline as the camera pushes in; on mobile it sits 7% up so her face stays
+              above the text. The gaps this leaves are under the solid teal overlays. */}
           <picture>
+            <source media={`${DESKTOP_QUERY} and ${REDUCED_MOTION}`} srcSet={desktopStillSrcSet} />
             <source media={DESKTOP_QUERY} srcSet={desktopSrcSet} />
+            <source media={`${MOBILE_QUERY} and ${REDUCED_MOTION}`} srcSet={mobileStillSrcSet} />
             <source media={MOBILE_QUERY} srcSet={mobileSrcSet} />
             <img
               {...imgProps}
               alt=""
-              className="h-full w-full object-cover object-[50%_28%] lg:object-[70%_35%]"
+              className="h-full w-full -translate-y-[7%] object-cover object-[50%_28%] lg:translate-x-[6%] lg:translate-y-0 lg:object-[70%_35%]"
             />
           </picture>
           {hasDesktopVideo && (
             <HeroVideo
               src={MEDIA.desktop.video}
               poster={MEDIA.desktop.poster}
+              endFrame={MEDIA.desktop.still}
               media={DESKTOP_QUERY}
-              className="absolute inset-0 h-full w-full object-cover object-[70%_35%]"
+              className="absolute inset-0 h-full w-full translate-x-[6%] object-cover object-[70%_35%]"
             />
           )}
           {hasMobileVideo && (
             <HeroVideo
               src={MEDIA.mobile.video}
               poster={MEDIA.mobile.poster}
+              endFrame={MEDIA.mobile.still}
               media={MOBILE_QUERY}
-              className="absolute inset-0 h-full w-full object-cover object-[50%_28%]"
+              className="absolute inset-0 h-full w-full -translate-y-[7%] object-cover object-[50%_28%]"
             />
           )}
           {/* Mobile: deep teal rising from the bottom behind the text */}
           <div className="absolute inset-0 bg-linear-to-t from-teal-dark from-20% via-teal-dark/80 via-50% to-transparent to-80% lg:hidden" />
+          {/* Desktop: covers the strip the 6% shift leaves at the left edge, fading out */}
+          <div className="absolute inset-y-0 left-0 hidden w-[15%] bg-linear-to-r from-teal-dark from-40% to-transparent lg:block" />
           {/* Desktop: deep teal from the left behind the text, clear over the patient */}
           <div className="absolute inset-0 hidden bg-linear-to-r from-teal-dark/95 from-15% via-teal-dark/70 via-45% to-transparent to-75% lg:block" />
           <div className="absolute inset-x-0 bottom-0 hidden h-48 bg-linear-to-t from-teal-dark/80 to-transparent lg:block" />
         </div>
 
         <div className="mx-auto flex h-full max-w-7xl flex-col px-5 lg:px-6">
-          <div className="flex flex-1 flex-col justify-end pb-6 lg:max-w-[600px] lg:justify-center lg:pb-4 lg:pt-6 xl:max-w-[680px] lg:short:pt-4">
-            <p className="hero-rise inline-flex w-fit items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-medium backdrop-blur-md lg:text-sm">
+          <div className="flex flex-1 flex-col justify-end pb-4 lg:max-w-[600px] lg:justify-center lg:pb-4 lg:pt-6 xl:max-w-[680px] lg:short:pt-4">
+            <p className="hero-rise hidden w-fit items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-medium backdrop-blur-md lg:inline-flex lg:text-sm">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#f3a27d] opacity-75 motion-reduce:animate-none" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#f3a27d]" />
@@ -126,7 +143,7 @@ export default function Hero() {
             </p>
 
             <h1
-              className="hero-rise font-heading mt-4 text-[clamp(2rem,8.2vw,2.75rem)] leading-[1.06] tracking-tight lg:mt-5 lg:text-[clamp(2.5rem,min(4.2vw,6.8vh),4rem)] lg:short:mt-4"
+              className="hero-rise font-heading text-[clamp(2rem,8.2vw,2.75rem)] leading-[1.06] tracking-tight lg:mt-5 lg:text-[clamp(2.5rem,min(4.2vw,6.8vh),4rem)] lg:short:mt-4"
               style={{ textWrap: "balance", animationDelay: "80ms" }}
             >
               Whatever brought you here, we can help&mdash;
@@ -141,7 +158,7 @@ export default function Hero() {
               for every age, including anxious patients and those with medical needs.
             </p>
 
-            <div className="hero-rise mt-6 lg:mt-8 lg:short:mt-6" style={{ animationDelay: "240ms" }}>
+            <div className="hero-rise mt-5 lg:mt-8 lg:short:mt-6" style={{ animationDelay: "240ms" }}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60 lg:text-xs">
                 What&apos;s bothering you?
               </p>
@@ -159,7 +176,7 @@ export default function Hero() {
             </div>
 
             <div
-              className="hero-rise mt-6 grid grid-cols-2 gap-3 lg:mt-8 lg:flex lg:items-center lg:short:mt-6"
+              className="hero-rise mt-5 grid grid-cols-2 gap-3 lg:mt-8 lg:flex lg:items-center lg:short:mt-6"
               style={{ animationDelay: "320ms" }}
             >
               <Link

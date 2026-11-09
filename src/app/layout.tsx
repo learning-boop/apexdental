@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import IntroSplash, { INTRO_SCRIPT } from "@/components/IntroSplash";
 
 const dmSans = DM_Sans({
   variable: "--font-body",
@@ -29,14 +30,23 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Apex Dental NM",
     locale: "en_US",
-    images: [{ url: "/images/sections/hero-poster-desktop.jpg", width: 1920, height: 1080 }],
+    images: [{ url: "/images/hero/dental-office-still-desktop.jpg", width: 1280, height: 720 }],
   },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${dmSerif.variable} h-full`}>
+    // suppressHydrationWarning: INTRO_SCRIPT sets data-intro on <html> before React hydrates.
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${dmSerif.variable} h-full`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: INTRO_SCRIPT }} />
+      </head>
       <body className="min-h-full flex flex-col font-[family-name:var(--font-body)] text-charcoal antialiased">
+        <IntroSplash />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

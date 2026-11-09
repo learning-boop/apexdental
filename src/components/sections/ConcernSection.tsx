@@ -17,14 +17,14 @@ export default function ConcernSection() {
           {/* Image LEFT */}
           <div>
             <Image
-              src="/images/sections/03-tooth-pain-laptop.jpg"
+              src="/images/emergency/tooth-pain-desktop.jpg"
               alt="Man pausing while eating because of tooth pain"
               width={1448}
               height={1086}
               className="hidden lg:block rounded-lg object-cover w-full"
             />
             <Image
-              src="/images/sections/04-tooth-pain-mobile.jpg"
+              src="/images/emergency/tooth-pain-mobile.jpg"
               alt="Man pausing while eating because of tooth pain"
               width={1122}
               height={1402}
