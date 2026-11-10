@@ -63,7 +63,7 @@ export default function PageHero({
       />
 
       <div
-        className={`mx-auto max-w-7xl px-5 py-10 lg:px-6 lg:py-16 ${
+        className={`mx-auto  px-5 py-10 lg:px-6 lg:py-16 ${
           image ? "grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14" : ""
         }`}
       >
@@ -166,7 +166,7 @@ export default function PageHero({
 
         {image && (
           <div className="hero-rise relative" style={{ animationDelay: "200ms" }}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl shadow-black/30 ring-1 ring-white/10">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl shadow-black/30 ring-1 ring-white/10">
               <Image
                 src={image}
                 alt={imageAlt}

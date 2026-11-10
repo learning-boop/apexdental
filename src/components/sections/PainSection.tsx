@@ -68,8 +68,8 @@ const cards = [
 
 export default function PainSection() {
   return (
-    <section className="py-14 lg:py-20 bg-sand">
-      <div className="max-w-7xl mx-auto px-5 lg:px-6">
+    <section className="py-10 lg:py-16 bg-sand">
+      <div className=" mx-auto px-5 lg:px-6">
         <div className="max-w-xl mx-auto text-center mb-10 lg:mb-12">
           <h2 className="font-heading text-3xl lg:text-[2.5rem] text-charcoal mb-4">
             It starts with what you feel.

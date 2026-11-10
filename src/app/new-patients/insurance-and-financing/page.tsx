@@ -82,7 +82,7 @@ export default function InsurancePage() {
       />
 
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <SectionHeading
             eyebrow="In-network plans"
             title="Insurance we work with."
@@ -108,7 +108,7 @@ export default function InsurancePage() {
       </section>
 
       <section className="bg-white py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 lg:grid-cols-2 lg:gap-16 lg:px-6">
+        <div className="mx-auto grid  items-center gap-10 px-5 lg:grid-cols-2 lg:gap-16 lg:px-6">
           <div>
             <SectionHeading
               eyebrow="Financing"
@@ -147,7 +147,7 @@ export default function InsurancePage() {
       </section>
 
       <section className="bg-teal-light py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14 lg:px-6">
+        <div className="mx-auto grid  gap-8 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14 lg:px-6">
           <SectionHeading eyebrow="Questions" title="Paying for your care." />
           <Faq faqs={faqs} />
         </div>

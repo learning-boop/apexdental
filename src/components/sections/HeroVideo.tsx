@@ -69,6 +69,7 @@ export default function HeroVideo({ src, poster, endFrame, media, className }: H
       src={src}
       poster={autoplayBlocked ? endFrame : poster}
       muted
+      loop
       playsInline
       preload="auto"
       aria-hidden="true"

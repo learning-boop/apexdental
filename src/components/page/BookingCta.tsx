@@ -12,7 +12,7 @@ export default function BookingCta({
 }) {
   return (
     <section className="bg-warm-white py-14 lg:py-20">
-      <div className="mx-auto max-w-7xl px-5 lg:px-6">
+      <div className="mx-auto  px-5 lg:px-6">
         <div className="relative isolate overflow-hidden rounded-2xl bg-teal px-6 py-10 text-white lg:px-14 lg:py-14">
           <div
             aria-hidden="true"

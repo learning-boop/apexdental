@@ -2,7 +2,7 @@ import { ChevronDown } from "lucide-react";
 
 export default function TurnSection() {
   return (
-    <section className="py-10 lg:py-14 bg-gradient-to-b from-sand to-teal-light">
+    <section className="py-8 lg:py-12 bg-gradient-to-b from-sand to-teal-light">
       <div className="max-w-2xl mx-auto px-5 lg:px-6 text-center">
         <h2 className="font-heading text-3xl lg:text-[2.5rem] text-charcoal mb-3">
           Here&apos;s what changes when you come to Apex.

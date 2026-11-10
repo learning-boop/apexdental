@@ -5,16 +5,6 @@ import path from "node:path";
 import { ArrowRight, Phone } from "lucide-react";
 import HeroVideo from "./HeroVideo";
 
-const chips = [
-  "Toothache",
-  "Broken tooth",
-  "Missing teeth",
-  "Bleeding gums",
-  "Better smile",
-  "My child",
-  "I’m nervous",
-];
-
 const stats = [
   { value: "14 years", label: "Of experience" },
   { value: "3,500+", label: "Patients treated" },
@@ -129,51 +119,17 @@ export default function Hero() {
           <div className="absolute inset-x-0 bottom-0 hidden h-48 bg-linear-to-t from-teal-dark/80 to-transparent lg:block" />
         </div>
 
-        <div className="mx-auto flex h-full max-w-7xl flex-col px-5 lg:px-6">
+        <div className="mx-auto flex h-full flex-col px-5 lg:px-6">
           <div className="flex flex-1 flex-col justify-end pb-4 lg:max-w-[600px] lg:justify-center lg:pb-4 lg:pt-6 xl:max-w-[680px] lg:short:pt-4">
-            <p className="hero-rise hidden w-fit items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-medium backdrop-blur-md lg:inline-flex lg:text-sm">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#f3a27d] opacity-75 motion-reduce:animate-none" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#f3a27d]" />
-              </span>
-              <span>
-                Family &amp; Emergency Dentist
-                <span className="hidden sm:inline"> &middot; West Albuquerque</span>
-              </span>
-            </p>
 
             <h1
-              className="hero-rise font-heading text-[clamp(2rem,8.2vw,2.75rem)] leading-[1.06] tracking-tight lg:mt-5 lg:text-[clamp(2.5rem,min(4.2vw,6.8vh),4rem)] lg:short:mt-4"
+              className="hero-rise font-heading text-[clamp(2rem,8.2vw,2.75rem)] leading-[1.06] tracking-tight lg:text-[clamp(2.5rem,min(4.2vw,6.8vh),4rem)]"
               style={{ textWrap: "balance", animationDelay: "80ms" }}
             >
               Whatever brought you here, we can help&mdash;
               <span className="text-[#f6c9a6]">often the same day.</span>
             </h1>
 
-            <p
-              className="hero-rise mt-4 max-w-xl text-[15px] leading-relaxed text-white/80 lg:mt-5 lg:text-lg lg:short:mt-4 short-phone:hidden [@media(max-height:640px)]:hidden"
-              style={{ animationDelay: "160ms" }}
-            >
-              Toothache, a broken tooth, missing teeth or a nervous child&mdash;gentle care
-              for every age, including anxious patients and those with medical needs.
-            </p>
-
-            <div className="hero-rise mt-5 lg:mt-8 lg:short:mt-6" style={{ animationDelay: "240ms" }}>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60 lg:text-xs">
-                What&apos;s bothering you?
-              </p>
-              <div className="no-scrollbar -mx-5 mt-3 flex gap-2 overflow-x-auto px-5 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0">
-                {chips.map((chip) => (
-                  <Link
-                    key={chip}
-                    href="/book"
-                    className="shrink-0 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-md transition-colors hover:border-white hover:bg-white hover:text-teal"
-                  >
-                    {chip}
-                  </Link>
-                ))}
-              </div>
-            </div>
 
             <div
               className="hero-rise mt-5 grid grid-cols-2 gap-3 lg:mt-8 lg:flex lg:items-center lg:short:mt-6"

@@ -72,7 +72,7 @@ export default function FirstVisitPage() {
       />
 
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[1fr_1.2fr] lg:gap-16 lg:px-6">
+        <div className="mx-auto grid  gap-10 px-5 lg:grid-cols-[1fr_1.2fr] lg:gap-16 lg:px-6">
           <div>
             <SectionHeading eyebrow="Before you come" title="What to bring." />
             <ul className="mt-6 space-y-3">
@@ -108,7 +108,7 @@ export default function FirstVisitPage() {
       </section>
 
       <section className="bg-white py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <SectionHeading eyebrow="On the day" title="What happens when you visit." className="mb-10" />
           <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((s, i) => (
@@ -125,7 +125,7 @@ export default function FirstVisitPage() {
       </section>
 
       <section className="bg-teal-light py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14 lg:px-6">
+        <div className="mx-auto grid  gap-8 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14 lg:px-6">
           <SectionHeading eyebrow="Questions" title="New patient questions." />
           <Faq faqs={faqs} />
         </div>

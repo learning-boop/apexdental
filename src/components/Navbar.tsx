@@ -96,7 +96,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50">
       {/* Top info bar */}
       <div className="hidden lg:block bg-deep-teal text-[13px] tracking-wide">
-        <div className="max-w-7xl mx-auto px-6 h-9 flex items-center justify-center gap-2 text-white/70">
+        <div className=" mx-auto px-6 h-9 flex items-center justify-center gap-2 text-white/70">
           <span>6330 Riverside Plaza Ln NW, Suite 165</span>
           <span aria-hidden>&middot;</span>
           <span>Open Tue&ndash;Sat 9 am&ndash;7 pm</span>
@@ -107,7 +107,7 @@ export default function Navbar() {
 
       {/* Main bar */}
       <nav className="bg-white/95 backdrop-blur-sm border-b border-black/5">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className=" mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between h-16 lg:h-[68px]">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5">

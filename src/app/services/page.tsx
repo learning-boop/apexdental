@@ -33,7 +33,7 @@ export default function ServicesPage() {
       />
 
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <SectionHeading
             eyebrow="Find your treatment"
             title="Choose the problem that sounds like you."
@@ -98,7 +98,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="bg-white py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <SectionHeading title="All treatments, A to Z." className="mb-8" />
           <ul className="grid gap-x-8 gap-y-1 sm:grid-cols-2 lg:grid-cols-3">
             {az.map((s) => (

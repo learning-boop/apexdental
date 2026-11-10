@@ -18,8 +18,8 @@ const tiles = [
 
 export default function EnvironmentSection() {
   return (
-    <section className="py-14 lg:py-28 bg-teal-light">
-      <div className="max-w-7xl mx-auto px-5 lg:px-6">
+    <section className="py-10 lg:py-16 bg-teal-light">
+      <div className=" mx-auto px-5 lg:px-6">
         <h2 className="font-heading text-3xl lg:text-[2.5rem] text-charcoal mb-12 text-center">
           Help that&apos;s easy to reach.
         </h2>

@@ -2,18 +2,18 @@ import Image from "next/image";
 
 const doctors = [
   {
-    name: "Dr. Sunil Kumar Reddy",
-    credentials: "DMD, BDS",
-    bio: "Implant training through the AAID, cosmetic smile design, experienced with children, anxious and elderly patients.",
-    image: null as string | null, // Awaiting proper headshot from client
-    placeholder: "Professional headshot needed \u2014 please ask the client",
-  },
-  {
     name: "Dr. Suneel Namburi",
     credentials: "DMD, MDS, MFDS",
     bio: "Specialist training in prosthodontics, DMD from Boston University, 10+ years in general, cosmetic and restorative dentistry.",
     image: "/images/team/dr-suneel-namburi-portrait.jpg",
     placeholder: null,
+  },
+  {
+    name: "Dr. Sunil Kumar Reddy",
+    credentials: "DMD, BDS",
+    bio: "Implant training through the AAID, cosmetic smile design, experienced with children, anxious and elderly patients.",
+    image: null as string | null, // Awaiting proper headshot from client
+    placeholder: "Professional headshot needed \u2014 please ask the client",
   },
 ];
 
@@ -33,8 +33,8 @@ const logos = [
 
 export default function DoctorsSection() {
   return (
-    <section className="py-14 lg:py-28 bg-sand">
-      <div className="max-w-7xl mx-auto px-5 lg:px-6">
+    <section className="py-10 lg:py-16 bg-sand">
+      <div className=" mx-auto px-5 lg:px-6">
         <h2 className="font-heading text-3xl lg:text-[2.5rem] text-charcoal mb-12 text-center">
           Experienced hands you can trust.
         </h2>

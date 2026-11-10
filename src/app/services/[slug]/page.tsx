@@ -85,7 +85,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
 
       {/* 1. The pain -> the concern -> the impact */}
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <SectionHeading
             eyebrow="Sound familiar?"
             title="What’s going on—and why it matters."
@@ -122,7 +122,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
       {/* Emergency only: first aid before you arrive */}
       {s.firstAid && (
         <section className="bg-white py-14 lg:py-20">
-          <div className="mx-auto max-w-7xl px-5 lg:px-6">
+          <div className="mx-auto  px-5 lg:px-6">
             <SectionHeading
               eyebrow="Before you get here"
               title="Dental first aid."
@@ -143,7 +143,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
 
       {/* 2. The turn: how Apex helps + who it's for */}
       <section className="bg-linear-to-b from-sand to-teal-light py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[1.25fr_1fr] lg:gap-14 lg:px-6">
+        <div className="mx-auto grid  gap-10 px-5 lg:grid-cols-[1.25fr_1fr] lg:gap-14 lg:px-6">
           <div>
             <SectionHeading
               eyebrow="Here’s what changes"
@@ -179,7 +179,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
       {/* 3. Options and details */}
       {s.details && (
         <section className="bg-white py-14 lg:py-20">
-          <div className="mx-auto max-w-7xl space-y-14 px-5 lg:px-6">
+          <div className="mx-auto  space-y-14 px-5 lg:px-6">
             {s.details.map((d) => (
               <div key={d.heading}>
                 <SectionHeading title={d.heading} intro={d.intro} className="mb-8" />
@@ -201,7 +201,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
 
       {/* 4. Treatment, step by step */}
       <section className={`py-14 lg:py-20 ${s.details ? "bg-teal-light" : "bg-white"}`}>
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <SectionHeading eyebrow="Your treatment" title="What to expect, step by step." className="mb-10" />
           <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {s.steps.map((step, i) => (
@@ -219,7 +219,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
 
       {/* 5. Aftercare */}
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-2 lg:gap-12 lg:px-6">
+        <div className="mx-auto grid  gap-8 px-5 lg:grid-cols-2 lg:gap-12 lg:px-6">
           <div>
             <SectionHeading eyebrow="Afterwards" title={s.aftercareHeading ?? "Recovery and aftercare."} className="mb-6" />
             <ul className="space-y-3">
@@ -261,7 +261,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
 
       {/* 6. FAQs */}
       <section className="bg-white py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14 lg:px-6">
+        <div className="mx-auto grid  gap-8 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14 lg:px-6">
           <div>
             <SectionHeading eyebrow="Questions" title="Things patients often ask." />
             <p className="mt-4 text-charcoal-light">
@@ -278,7 +278,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
 
       {/* 7. Related treatments */}
       <section className="bg-warm-white pt-14 lg:pt-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <SectionHeading title="Related treatments." className="mb-8" />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((r) => (

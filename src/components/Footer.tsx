@@ -35,7 +35,7 @@ const hours = [
 export default function Footer() {
   return (
     <footer className="bg-deep-teal text-white pb-20 lg:pb-0">
-      <div className="max-w-7xl mx-auto px-5 lg:px-6 py-14 lg:py-16">
+      <div className=" mx-auto px-5 lg:px-6 py-14 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div>
@@ -95,7 +95,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-5 lg:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/40">
+        <div className=" mx-auto px-5 lg:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/40">
           <span>&copy; 2026 Apex Dental NM</span>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>

@@ -52,7 +52,7 @@ export default function OffersPage() {
       />
 
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <ul className="grid gap-6 lg:grid-cols-3">
             {offers.map((o) => {
               const Icon = o.icon;

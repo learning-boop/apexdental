@@ -68,8 +68,8 @@ const treatments = [
 
 export default function FindTreatmentSection() {
   return (
-    <section className="py-14 lg:py-28 bg-sand">
-      <div className="max-w-7xl mx-auto px-5 lg:px-6">
+    <section className="py-10 lg:py-16 bg-sand">
+      <div className=" mx-auto px-5 lg:px-6">
         <h2 className="font-heading text-3xl lg:text-[2.5rem] text-charcoal mb-12 text-center">
           Find the right treatment for your problem.
         </h2>

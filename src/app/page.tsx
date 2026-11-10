@@ -5,14 +5,12 @@ import LifeImpactSection from "@/components/sections/LifeImpactSection";
 import TurnSection from "@/components/sections/TurnSection";
 import EnvironmentSection from "@/components/sections/EnvironmentSection";
 import PersonalSection from "@/components/sections/PersonalSection";
-import FindTreatmentSection from "@/components/sections/FindTreatmentSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import DoctorsSection from "@/components/sections/DoctorsSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import EmergencyBand from "@/components/sections/EmergencyBand";
 import BookSection from "@/components/sections/BookSection";
 import DentistSchema from "@/components/page/DentistSchema";
-
 export default function Home() {
   return (
     <>
@@ -31,8 +29,6 @@ export default function Home() {
       <EnvironmentSection />
       {/* 7. Personal */}
       <PersonalSection />
-      {/* 8. Find Treatment */}
-      <FindTreatmentSection />
       {/* 9. How It Works */}
       <HowItWorksSection />
       {/* 10. Doctors & Numbers */}

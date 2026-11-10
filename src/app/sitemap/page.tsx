@@ -20,7 +20,7 @@ export default function SitemapPage() {
         crumbs={[{ label: "Sitemap" }]}
       />
       <section className="bg-warm-white py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:grid-cols-2 lg:grid-cols-3 lg:px-6">
+        <div className="mx-auto grid  gap-10 px-5 sm:grid-cols-2 lg:grid-cols-3 lg:px-6">
           {pageGroups.map((g) => (
             <div key={g.title}>
               <h2 className="font-heading text-2xl text-charcoal">{g.title}</h2>

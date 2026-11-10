@@ -25,7 +25,7 @@ export default function StaffPage() {
       />
 
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {staff.map((m) => (
               <li key={m.name} className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm">
@@ -51,7 +51,7 @@ export default function StaffPage() {
       </section>
 
       <section className="bg-teal-light py-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 px-5 sm:flex-row sm:items-center lg:px-6">
+        <div className="mx-auto flex  flex-col items-start justify-between gap-4 px-5 sm:flex-row sm:items-center lg:px-6">
           <p className="font-heading text-2xl text-charcoal">Want to know who’ll be treating you?</p>
           <Link
             href="/our-team/doctors"

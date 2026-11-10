@@ -51,7 +51,7 @@ export default function RegistrationFormsPage() {
       />
 
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <SectionHeading eyebrow="Forms" title="What you’ll fill in." className="mb-10" />
           <ul className="grid gap-5 sm:grid-cols-2">
             {forms.map((f) => {

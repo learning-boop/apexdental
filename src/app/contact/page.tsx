@@ -26,7 +26,7 @@ export default function ContactPage() {
       />
 
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[1fr_1.2fr] lg:gap-12 lg:px-6">
+        <div className="mx-auto grid  gap-8 px-5 lg:grid-cols-[1fr_1.2fr] lg:gap-12 lg:px-6">
           <div className="space-y-4">
             <ContactCard icon={Phone} title="Call us" action={{ label: site.phone, href: site.phoneHref }}>
               The fastest way to book or get emergency help.
@@ -96,7 +96,7 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-white py-14 lg:py-20">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 lg:flex-row lg:items-center lg:px-6">
+        <div className="mx-auto flex  flex-col items-start justify-between gap-6 px-5 lg:flex-row lg:items-center lg:px-6">
           <SectionHeading
             title="Ready to book?"
             intro="Send us a request and our team will call you to find a time that suits you."

@@ -47,7 +47,7 @@ export default function PostOpPage() {
       </PageHero>
 
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[260px_1fr] lg:gap-14 lg:px-6">
+        <div className="mx-auto grid  gap-10 px-5 lg:grid-cols-[260px_1fr] lg:gap-14 lg:px-6">
           <nav aria-label="Jump to a treatment" className="lg:sticky lg:top-32 lg:self-start">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-terracotta">Jump to</p>
             <ul className="mt-3 flex flex-wrap gap-2 lg:flex-col lg:gap-1">

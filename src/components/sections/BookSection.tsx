@@ -29,8 +29,8 @@ export default function BookSection({ showHeading = true }: { showHeading?: bool
   };
 
   return (
-    <section id="book" className="py-14 lg:py-28 pb-24 lg:pb-28">
-      <div className="max-w-7xl mx-auto px-5 lg:px-6">
+    <section id="book" className="py-10 lg:py-16 pb-20 lg:pb-20">
+      <div className=" mx-auto px-5 lg:px-6">
         {showHeading && (
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl lg:text-[2.5rem] text-charcoal mb-3">

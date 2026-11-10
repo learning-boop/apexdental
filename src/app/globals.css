@@ -18,6 +18,8 @@
   --color-deep-teal: #0F4C5C;
   --color-warm-white: #fdfcfa;
   --color-warm-gray: #999999;
+
+  --container-7xl: 1400px;
 }
 
 html {

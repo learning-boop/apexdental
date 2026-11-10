@@ -11,8 +11,8 @@ const concerns = [
 
 export default function ConcernSection() {
   return (
-    <section className="py-14 lg:py-28 bg-sand">
-      <div className="max-w-7xl mx-auto px-5 lg:px-6">
+    <section className="py-10 lg:py-16 bg-sand">
+      <div className=" mx-auto px-5 lg:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image LEFT */}
           <div>

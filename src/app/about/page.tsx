@@ -80,7 +80,7 @@ export default function AboutPage() {
       />
 
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-2 lg:gap-16 lg:px-6">
+        <div className="mx-auto grid  gap-10 px-5 lg:grid-cols-2 lg:gap-16 lg:px-6">
           <div>
             <SectionHeading eyebrow="Our story" title="A patient-first clinic, built around you." />
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-charcoal-light">
@@ -122,7 +122,7 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-white py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <SectionHeading eyebrow="Why patients choose us" title="Help that’s easy to reach." className="mb-10" />
           <div className="grid gap-4 lg:grid-cols-2">
             <HelpTiles keys={["same-day", "saturday", "family", "sedation"]} />
@@ -136,7 +136,7 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-sand py-14 lg:py-20">
-        <div className="mx-auto max-w-7xl px-5 lg:px-6">
+        <div className="mx-auto  px-5 lg:px-6">
           <SectionHeading eyebrow="Care that fits you" title="Whoever you are, you’re welcome here." className="mb-10" />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {ages.map((a) => {
@@ -161,7 +161,7 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-white py-14 lg:py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 lg:grid-cols-2 lg:gap-16 lg:px-6">
+        <div className="mx-auto grid  items-center gap-10 px-5 lg:grid-cols-2 lg:gap-16 lg:px-6">
           <div>
             <SectionHeading
               eyebrow="Our dentists"

@@ -46,7 +46,7 @@ export default function DoctorsPage() {
           id={d.slug}
           className={`scroll-mt-32 py-14 lg:py-20 ${i % 2 === 0 ? "bg-sand" : "bg-white"}`}
         >
-          <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:px-6">
+          <div className="mx-auto grid  gap-10 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 lg:px-6">
             <div className="lg:sticky lg:top-32 lg:self-start">
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-teal shadow-lg">
                 {d.image ? (
@@ -98,7 +98,7 @@ export default function DoctorsPage() {
       ))}
 
       <section className="bg-teal-light py-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 px-5 sm:flex-row sm:items-center lg:px-6">
+        <div className="mx-auto flex  flex-col items-start justify-between gap-4 px-5 sm:flex-row sm:items-center lg:px-6">
           <p className="font-heading text-2xl text-charcoal">Meet the friendly faces at the front desk and chairside.</p>
           <Link
             href="/our-team/staff"
